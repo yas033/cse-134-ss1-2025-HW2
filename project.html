@@ -33,9 +33,9 @@
         </header>
 
         <main>
-            <h1>Most Recent Works</h1>
 
             <section>
+                <h2>Most Recent Works</h2>
                 <table>
                     <caption>
                         Project Overview
@@ -64,8 +64,9 @@
             </section>
 
             <section>
+                <h4>Project Details</h4>
                 <dl>
-                    <dt>Project #1 Name</dt>
+                    <dt>Project #1</dt>
                     <dd>
                         <ins>
                             Updated in <time datetime="2025-07-13">July 13th,2025</time>
@@ -80,19 +81,19 @@
                     <p>This project uses<dfn> SOME SPECIAL </dfn>technology</p>
                 </details>
                 <pre>
-                    <br /><hr>    
+                    <br />   
                 </pre>
-            </section>
+                <p>*************************************************************************</p>
 
-            <section>
+
                 <form action="/submit" method="post">
                     <label for="feedback">Feedback for:</label>
-                    <input list="feedback" placeholder="select on the project">
-                    <datalist id="feedback">
+                    <input id="feedback" list="feedback-list" placeholder="select or type your idea">
+                    <datalist id="feedback-list">
                         <option value="project #1">
                         <option value="project #2">
                         <option value="project #3">
-                        <option value="Other suggestion">
+                        <option value="Other suggestions">
                     </datalist>
                     <button type="submit">Submit</button><br />
                     <textarea placeholder="Leave Feedback Here:"></textarea>
