@@ -1,11 +1,20 @@
 <!Doctype html>
-<html>
+<html lang="en">
     <head>
         <!--page title-->
         <meta charset="UTF-8">
         <title>
             Yanhua's Site
         </title>
+
+        <style>
+            my-intro{
+                display:block;
+                border:1px dashed #e1989855;
+                padding:10px;
+                margin:10px 0;
+            }
+        </style>        
     </head>
 
     <body>
@@ -50,6 +59,7 @@
                 
 
             <article>
+                <h2>Introduction</h2>
                 <p>Hi! I'm Yanhua Shi
                 <abbr title="HyperText Markup Language">HTML</abbr> is what I am learning now!
                 </p>
@@ -58,72 +68,52 @@
                     "Just break it down."
                     <cite>——Yanhua Shi</cite>
                 </blockquote>
-            </article>
-        
 
-            <section>
                 <h3>Interests</h3>
                 <ul>
                     <li>...</li>
                     <li>...</li>
                     <li>...</li>
                 </ul>
-            </section>
 
-            <section>
                 <h3>Value & Visions</h3>
                 <ol>
                     <li>...</li>
                     <li>...</li>
                     <li>...</li>
                 </ol>
-            </section>
+            </article>
 
             <details>
                 <summary><strong>Fun fact about me</strong></summary>
                 <p>Which one of below is true?</p>
-                <select>
-                    <optgroup>
+                    <optgroup label="Options">
                         <option>1</option>
                         <option>2</option>
                         <option>3</option>
                     </optgroup>
-                </select>
                 <details><summary><i>Answer</i></summary><p><b>3 is true</b></p></details>
             </details>
-
+                    
             <!--"Labs" or "Experiments" section-->
-            <section>
-                <h2>Custom Elements Experiments</h2>
+            <h2>Custom Elements Experiments</h2>
 
-                <my-intro>
-                    <h3>Test Custom Intro</h3>
-                    <p>demo of my-intro</p>
-                </my-intro>
+            <my-intro>
+                <h3>Test Custom Intro</h3>
+                <p>demo of my-intro</p>
+            </my-intro>
 
-                <style>
-                    my-intro{
-                        display:block;
-                        border:1px dashed #e1989855;
-                        padding:10px;
-                        margin:10px 0;
+            <script>
+                class HelloWorld extends HTMLElement{
+                    constructor(){
+                        super();
+                        console.log("Hello world!");
                     }
-                </style>
-            </section>
+                }   
+                customElements.define('hello-world',HelloWorld);
+            </script>
 
-            <section>
-                <script>
-                    class HelloWorld extends HTMLElement{
-                        constructor(){
-                            super();
-                            console.log("Hello world!");
-                        }
-                    }
-                    customElements.define('hello-world',HelloWorld);
-                </script>
-
-                <hello-world></hello-world>
-            </section>
+            <hello-world></hello-world>
 
         </main>
 
@@ -135,6 +125,7 @@
                     </em>        
                 </p>
             <section class="copyrights">
+                <h2>Copyright</h2>
                 <p>
                     <span style="color:blue">
                         2025 Yanhua Shi. All rights reserved. | Connect with me:
